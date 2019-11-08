@@ -1,0 +1,149 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #f3f3f3;
+    margin: 0;
+}
+/*告诉浏览器设置的width包含border和padding值*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 用伪类实现form覆盖，z-index的大小表示谁在前面层
+ mobile friendly alternative to using background-attachment: fixed */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: #1b1b32;
+    background-image: url(https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#title {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;   
+}
+p {
+    font-size: 1.125rem;
+}
+p,h1{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+/*对输入框的文本定义格式inherit*/
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button {
+    border: none;
+  }
+/*对整块内容而非背景定义*/
+.container {
+    width: 100%;
+    margin: 3.125rem auto 0 auto;
+  }
+/*对不同设备做适配*/
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+.header {
+    padding: 0 0.625rem;
+    margin-bottom: 1.875rem;
+}
+
+#description {
+    font-size: 20px;
+    text-align: center;
+    font-style: italic;
+    margin-top: 0;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+#survey-form {
+    background: rgb(60, 75, 81);
+    padding: 2.5rem, 0.625rem;
+    border-radius: 5px;
+}
+@media (min-width: 480px) {
+    form {
+      padding: 2.5rem;
+    }
+  }
+/*外边距设置为auto的时候,可以居中*/
+.form-group {
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
+}
+/*对input设置*/
+.form-control {
+    display: block;
+    width: 100%; /*让输入框长度占满*/
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    color: #495057; /*字体颜色*/
+    background-color: #fff;
+    background-clip: padding-box; /*设置背景延伸到padding*/
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    /* 不同状态之间切换效果 */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  /* 调一下点选的小点和小方块的大小 */
+.input-radio,
+.input-checkbox {
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+  }
+.input-textarea {
+    min-height: 120px;   /*不同屏幕保持最小的高度*/
+    width: 100%;
+    padding: 0.625rem;
+    resize: vertical;  /*允许用户在垂直方向上调整元素的大小--就是可以一直往下写，会出来滑动栏*/
+  }
+.submit-button {
+    display: block; 
+    width: 100%;
+    padding: 0.75rem;
+    background:  rgb(55,175,101);
+    color: inherit; /*继承字体颜色*/
+    border-radius: 2px;
+    cursor: pointer; /*鼠标小手显示 */
+  }
+
