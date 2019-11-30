@@ -1,0 +1,124 @@
+<!-- 添加font图标 <i> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Product-Landing-Page.css" >
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>DoctorIELTS</title>
+</head>
+<body>
+    <!-- 为什么要设全局div -->
+<div id = "page-wrapper"> 
+    <header id = "header">
+        <div class="logo">
+            <img id = "header-img" src="logo.png" alt="logo">
+        </div>
+        <nav id = "nav-bar">
+            <ul>
+                <!-- class放在li还是a里的影响？ -->
+                <li ><a calss = "nav-link" href="#services">Services</a></li>
+                <li ><a calss = "nav-link" href="#courses">Courses</a></li>
+                <li ><a calss = "nav-link" href="#pricing">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ???container -->
+    <div class="container"></div>
+
+    <section id = "hero">
+        <h2>Let us diagnose your score</h2>
+        <form id = "form" action="https://www.freecodecamp.com/email-submit"> 
+            <input 
+            name="email"
+            id = "email"
+            type ="email"
+            placeholder="Enter your email address"
+            required
+            />
+            <input id = "submit" type="submit" value="Get Started" class="btn"/>
+        </form>
+    </section>
+    
+    <div class="container">
+        <section id="services">
+            <div class = "grid">
+                <div class="icon"><i class="fa fa-3x fa-stethoscope"></i></div>
+                <div class="desc">
+                    <h2>Diagnosis</h2>
+                    <p>Provide us with a sample of your work and receive an accurate score</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="icon"><i class="fa fa-3x fa-stethoscope"></i></div>
+                <div class="desc">
+                    <h2>Prescription</h2>
+                    <p>Take a full exam with one of our team and receive your score and some advice on how to improve</p>
+                </div>
+            </div>
+            <div class="grid">
+                    <div class="icon"><i class="fa fa-3x fa-stethoscope"></i></div>
+                    <div class="desc">
+                        <h2>Full Check-up</h2>
+                        <p>After takeing a full exam with our team you will receive a comprehensive breakdown of your work explaining why you received the score you did and how to improve in your next exam</p>
+                    </div>
+            </div>
+        </section>
+        <section id="courses">
+            <iframe
+                id="video"
+                height="315"
+                src="https://www.youtube.com/embed/T-uYzReetEI"
+                frameborder="0"
+                allowfullscreen
+            ></iframe>
+        </section>
+        <section id="pricing">
+            <div class="product" id="diagnosis">
+                <div class="level">Diagnosis</div>
+                <h2>$100</h2>
+                <ol>
+                    <li>submit your test</li>
+                    <li>doctor.IELTS work</li>
+                    <li>give the result</li>
+                    <li>make progress</li>
+                </ol>
+                <button class="btn">Select</button>
+            </div>
+            <div class="product" id="prescription">
+                <div class="level">Prescription</div>
+                <h2>$200</h2>
+                <ol>
+                    <li>submit your test</li>
+                    <li>doctor.IELTS work</li>
+                    <li>give the result</li>
+                    <li>make progress</li>
+                </ol>
+                <button class="btn">Select</button>
+            </div>
+            <div class="product" id="full-check-up">
+                <div class="level">Full Check-up</div>
+                    <h2>$400</h2>
+                    <ol>
+                        <li>submit your test</li>
+                        <li>doctor.IELTS work</li>
+                        <li>give the result</li>
+                        <li>make progress</li>
+                    </ol>
+                    <button class="btn">Select</button>
+            </div>           
+        </section>
+        <footer>
+            <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <span>Copyright 2019, Doctor.IELLTS</span>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
