@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+div {
+  position: relative;
+  z-index: 2; 
+}
+
+//每个元素的width全都设置为450px???
+body {
+  background-color: #333;
+  color: #000;  
+  font-family: 'Raleway',sans-serif;
+  font-weight:400;
+  display: flex;
+  justify-content: center;  
+  //justify配合下面align把元素放到正中间
+  align-items: center;
+  height: 100vh;  // height:100%; viewport height屏幕高度 ???为什么设置完这里后才会到正中间？？？
+}
+
+
+
+#quote-box{
+  border-radius: 3px;
+  position: relative;
+  width: 450px;
+  padding: 40px 50px;
+  display: table;   //按表格形式
+  background-color: #fff;
+  .quote-text {
+    i{
+      font-size: 1.0em;
+      margin-right: 0.4em; //能够跟着文字移动
+    }
+    text-align: center;
+    width: 450px;
+    height: auto;
+    clear: both; //清除浮动？？？
+    font-weight: 500;
+    font-size: 1.75em;  
+  }
+  .quote-author {
+    width: 450px;
+    text-align: right;
+    height: auto;
+    clear: both;
+    padding-top: 20px;
+    font-size: 1em;
+  }
+  .buttons {
+    width: 450px;
+    margin: auto;
+    display: block;
+    .button {
+      height: 38px;
+      border: none;
+      border-radius: 3px;
+      color: #fff;    
+      background-color: #333;
+      outline: none;
+      font-size: 0.85em;
+      padding: 8px 18px 6px 18px;
+      margin-top: 30px;
+      opacity: 1;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.9;  //SCSS 伪类嵌套
+      }
+      &#tweet-quote, &#tumblr-quote {  //SCSS 引用父元素
+        float: left; //左对齐
+        padding: 0px;
+        margin-right: 5px;
+        padding-top: 8px;
+        font-size: 1.2em;
+        width: 40px;
+        height: 30px;
+        text-align: center;
+        
+      }
+      &#new-quote {
+        float: right;  //右对齐
+      }
+    }
+  }
+}
