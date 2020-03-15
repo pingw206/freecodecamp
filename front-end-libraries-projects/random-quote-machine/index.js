@@ -57,14 +57,13 @@ function getQuote() {
   
   var color = Math.floor(Math.random()*colors.length);
 
-  var temp = $("html body").animate(
+  $("html body").animate(
     {
       backgroundColor: colors[color],
       color: colors[color]
     },
     1000
   );
-  console.log(temp);
   $(".button").animate(
   {
     backgroundColor: colors[color]
