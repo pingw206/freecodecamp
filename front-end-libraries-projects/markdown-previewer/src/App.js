@@ -17,6 +17,7 @@ class App extends Component{
     this.handleChange = this.handleChange.bind(this);
     this.handleEditorMaximize = this.handleEditorMaximize.bind(this);
     this.handlePreviewMaximize = this.handlePreviewMaximize.bind(this);
+    //为了在下面的回调函数中使用this, 这个绑定bind必不可少，不然调用这个函数的时候this的值为undefined
   }
   handleChange(e) {
     this.setState({
@@ -57,6 +58,7 @@ class App extends Component{
         </div>
         <div className="converter">
         </div>
+        {/* 好像converter没用？ */}
         <div className={classes[1]}>
           <Toolbar
             icon={classes[2]} 
