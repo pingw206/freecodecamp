@@ -13,6 +13,7 @@ rendererMy.link = function (href, title, text) {
   return `<a target="_blank" href="${href}">${text}</a>`;
 }
 //反引号 ``是ES6语法中用来拼接字符串和变量的--模板字符串
+//link没发现有什么用？？？
 
 const Preview = (props) => {
   return (
