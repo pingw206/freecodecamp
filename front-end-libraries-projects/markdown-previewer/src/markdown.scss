@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Russo+One');
+// toolbar的字体
 $darkAccent: #224B4B;
 $lightAccent: #2CDA9D;
 $backgroundBase: #619E9E;
 
 $shadow: 1px 1px 10px 2px darken($backgroundBase, 20%);
+// shadow X轴偏移、Y轴偏移、阴影模糊半径、阴影扩散半径，和阴影颜色; 亮度降低原来的到20%
 $default-border: 1px solid darken($backgroundBase, 35%);
 
 
@@ -11,18 +13,21 @@ body {
   background: lighten($backgroundBase, 12%);
   margin: 10px 0;
 }
+//变亮12%
+
 
 #preview,
 .title {
   display: inline-block;
 }
-
+//.title没找到
 .colorScheme {
   background-color: lighten($backgroundBase, 30%);
   border: $default-border;
   box-shadow: $shadow;
   border-top: none;
 }
+// 下面给@extend用
 
 .toolbar {
   position: relative;
@@ -35,7 +40,6 @@ body {
   i {
     width: 25px;
     color: black;
-    margin-left: 5px;
   }
   .fa-expand-arrows-alt,
   .fa-compress {
@@ -72,6 +76,7 @@ body {
     font-size: 12px;
   }
 }
+//resize允许调整大小
 
 .converter {
   width: 100px;
@@ -79,11 +84,12 @@ body {
   font-size: 35px;
   margin: auto;
 }
+//converter没有用吗？？
 
 .previewWrap {
   @extend .colorScheme;
   width: 800px;
-  margin: 20px auto;
+  margin: 18px auto;
   min-height: 200px;
   overflow-wrap: break-word;
   padding-right: 20px;
@@ -107,6 +113,7 @@ body {
     width: 550px;
   }
 }
+//？？？什么作用，如果文档小于850px,实行下面的width
 
 .maximized {
   width: 96%;
@@ -117,6 +124,8 @@ body {
     resize: none;
   }
 }
+//不需要resize,但是也会调整
+
 
 .hide {
   display: none;
@@ -145,7 +154,7 @@ body {
   }
 }
 
-// MARKDOWN STYLES
+// MARKDOWN STYLES。传进来的，官方文档没找到对应的html???
 #preview {
   blockquote {
     border-left: 3px solid #224B4B;
@@ -165,7 +174,7 @@ body {
     background: white;
     padding: 5px 0 5px 5px;
   }
-
+// <pre>预定义格式文本，``中的文本
   h1 {
     border-bottom: 2px solid $darkAccent;
   }

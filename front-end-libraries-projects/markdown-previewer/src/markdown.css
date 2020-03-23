@@ -23,8 +23,7 @@ body {
   font-size: 15px; }
   .toolbar i {
     width: 25px;
-    color: black;
-    margin-left: 5px; }
+    color: black; }
   .toolbar .fa-expand-arrows-alt,
   .toolbar .fa-compress {
     position: absolute;
@@ -51,14 +50,14 @@ body {
     font-size: 12px; }
 
 .converter {
-  width: 00px;
+  width: 100px;
   text-align: center;
   font-size: 35px;
   margin: auto; }
 
 .previewWrap {
   width: 800px;
-  margin: 20px auto;
+  margin: 18px auto;
   min-height: 200px;
   overflow-wrap: break-word;
   padding-right: 20px; }
