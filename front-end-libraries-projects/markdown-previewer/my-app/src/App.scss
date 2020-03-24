@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+$darkAccent: #224B4B;
+$lightAccent: #2CDA9D;
+$backgroundBase: #619E9E;
+$default-border: 1px solid darken($backgroundBase, 35%);
+$shadow: 1px 1px 10px 2px darken($backgroundBase, 20%);
+.colorScheme {
+  background-color: lighten($backgroundBase, 30%);
+  border: $default-border;
+  box-shadow: $shadow;
+  border-top: none;
+}
+
+body {
+
+}
+
+.toolbar {
+
+}
+
+.fa-compress,
+.fa-expand-arrows-alt {
+
+}
+
+.editorWrap{
+
+}
+
+.previewWrap {
+
+}
+
+.maximized {
+
+}
+
+.hide {
+
+}
+
+@media screen and (max-width: 850px) {
+
+}
+
+@media screen and (max-width: 650px) {
+
+}
