@@ -12,38 +12,122 @@ $shadow: 1px 1px 10px 2px darken($backgroundBase, 20%);
 }
 
 body {
-
+  background: lighten($backgroundBase,12%);
 }
-
+// #preview,
+// .title {
+//   display: inline-block;
+// }  没要这个设置和converter的设置
+.editorWrap{
+  width: 600px;
+  margin: 18px auto;
+  .toolbar {
+    width: 99%;
+  }
+  textarea {
+    @extend .colorScheme;
+    width: 99%;
+    outline: none;
+    min-height: 200px;
+    resize: vertical;
+    font-size: 12px;
+    padding: 5px 0 0 5px;
+  }
+}
 .toolbar {
-
+  position: relative;
+  background-color: lighten($darkAccent, 25%);
+  padding: 4px 4px 3px 3px;
+  font-family: Russo One;
+  font-size: 15px;
+  border: $default-border;
+  box-shadow: $shadow;
+  i {
+    width: 25px;
+    color: black;
+  }
+  .fa-compress,
+  .fa-expand-arrows-alt {
+    position: absolute;
+    right: -5px;
+  }
 }
 
 .fa-compress,
 .fa-expand-arrows-alt {
+  &:hover {
+    color: lighten($lightAccent, 10%);
+    cursor: pointer;
+  }
 
 }
 
-.editorWrap{
-
-}
 
 .previewWrap {
-
+  @extend .colorScheme;
+  width: 800px;
+  margin: 18px auto; //auto居中
+  min-height: 200px;
+  .toolbar {
+    width: 99%;
+  }
+  #preview {
+    width: 100%;
+    padding-left: 5px;
+    margin-top: -10px;
+  }
 }
 
 .maximized {
-
+  width: 96%;
+  min-height: 100vh;
+  margin: auto;
+  textarea {
+    min-height: 95vh; //释放之前设置的200px;
+    resize: none;
+  }
 }
 
 .hide {
-
+  display: none;
 }
 
-@media screen and (max-width: 850px) {
+//没有写@media变化
 
+//markdown格式，主要不同就是没有自动分行，引用处理，代码格式处理，表格格式处理；先只处理这几点
+#preview {
+ blockquote {
+   border-left: 2px solid black;
+   color: #224B4B;
+   padding-left: 5px;
+   margin-left: 25px;
+ }
+ pre {
+   background: white;
+   padding: 5px 0 5px 5px;
+ }
+ //
+ table {
+   border-collapse: collapse; //表格之间不要缝隙
+ }
+ h1 {
+  border-bottom: 2px solid $darkAccent;
 }
 
-@media screen and (max-width: 650px) {
+h2 {
+  border-bottom: 1px solid $darkAccent;
+}
 
+ td,
+ th {
+   border: 2px solid $darkAccent;
+   padding-left: 5px;
+   padding-right: 5px;
+ }
+ code {
+   background: white;
+   padding: 1px 4px 2px 4px;
+   font-size: 12px;
+   font-weight: bold;
+ }
 }

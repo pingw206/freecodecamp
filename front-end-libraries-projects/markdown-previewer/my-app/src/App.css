@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Russo+One");
+.colorScheme, .editorWrap textarea, .previewWrap {
+  background-color: #c0d8d8;
+  border: 1px solid #1d2f2f;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+  border-top: none; }
+
+body {
+  background: #87b5b5; }
+
+.editorWrap {
+  width: 600px;
+  margin: 18px auto; }
+  .editorWrap .toolbar {
+    width: 99%; }
+  .editorWrap textarea {
+    width: 99%;
+    outline: none;
+    min-height: 200px;
+    resize: vertical;
+    font-size: 12px;
+    padding: 5px 0 0 5px; }
+
+.toolbar {
+  position: relative;
+  background-color: #4aa3a3;
+  padding: 4px 4px 3px 3px;
+  font-family: Russo One;
+  font-size: 15px;
+  border: 1px solid #1d2f2f;
+  box-shadow: 1px 1px 10px 2px #3a5f5f; }
+  .toolbar i {
+    width: 25px;
+    color: black; }
+  .toolbar .fa-compress,
+  .toolbar .fa-expand-arrows-alt {
+    position: absolute;
+    right: -5px; }
+
+.fa-compress:hover,
+.fa-expand-arrows-alt:hover {
+  color: #57e2b1;
+  cursor: pointer; }
+
+.previewWrap {
+  width: 800px;
+  margin: 18px auto;
+  min-height: 200px; }
+  .previewWrap .toolbar {
+    width: 99%; }
+  .previewWrap #preview {
+    width: 100%;
+    padding-left: 5px;
+    margin-top: -10px; }
+
+.maximized {
+  width: 96%;
+  min-height: 100vh;
+  margin: auto; }
+  .maximized textarea {
+    min-height: 95vh;
+    resize: none; }
+
+.hide {
+  display: none; }
+
+#preview blockquote {
+  border-left: 2px solid black;
+  color: #224B4B;
+  padding-left: 5px;
+  margin-left: 25px; }
+#preview pre {
+  background: white;
+  padding: 5px 0 5px 5px; }
+#preview table {
+  border-collapse: collapse; }
+#preview h1 {
+  border-bottom: 2px solid #224B4B; }
+#preview h2 {
+  border-bottom: 1px solid #224B4B; }
+#preview td,
+#preview th {
+  border: 2px solid #224B4B;
+  padding-left: 5px;
+  padding-right: 5px; }
+#preview code {
+  background: white;
+  padding: 1px 4px 2px 4px;
+  font-size: 12px;
+  font-weight: bold; }
+
+/*# sourceMappingURL=App.css.map */

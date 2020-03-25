@@ -46,7 +46,7 @@ class App extends Component {
            'fa fa-compress']:
           ['editorWrap',
             'previewWrap',
-            'fas fa-expand-arrow-alt'];
+            'fas fa-expand-arrows-alt'];
                    
     return (
       <div>
